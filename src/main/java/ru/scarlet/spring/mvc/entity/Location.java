@@ -1,13 +1,7 @@
 package ru.scarlet.spring.mvc.entity;
 
-import ru.scarlet.spring.mvc.validation.CheckEmail;
-
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import java.util.HashMap;
-import java.util.Map;
+
 
 @Entity
 @Table(name = "location_list")
@@ -51,8 +45,20 @@ public class Location {
     public Location() {
     }
 
-    public Location(double longitude, double latitude) {
+    public Location(double longitude, double latitude, int type_id) {
         this.longitude = longitude;
         this.latitude = latitude;
+        this.type_id = type_id;
+    }
+
+    @Column(name = "type_id")
+    private int type_id;
+
+    public int getType_id() {
+        return type_id;
+    }
+
+    public void setType_id(int type_id) {
+        this.type_id = type_id;
     }
 }

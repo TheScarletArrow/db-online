@@ -26,18 +26,37 @@
         <th>
             Latitude
         </th>
+        <th>
+            type_id
+        </th>
+        <th>Operations</th>
+
     </tr>
     <c:forEach var="locs" items="${allLocations}">
+      <c:url var="updateButton" value="/updateInfo">
+          <c:param name="locId" value="${locs.id}" />
+      </c:url>
         <tr>
             <td>${locs.id}</td>
+
             <td>
                 ${locs.longitude}
             </td>
             <td>
                 ${locs.latitude}
             </td>
+            <td>
+                ${locs.type_id}
+            </td>
+            <td>
+                <input type="button" value="Update" onclick="window.location.href='${updateButton}'"/>
+            </td>
         </tr>
     </c:forEach>
 </table>
+
+<br><br>
+<input type="button" value="Add" onclick="window.location.href = 'addNewLocation'"/>
+
 </body>
 </html>
