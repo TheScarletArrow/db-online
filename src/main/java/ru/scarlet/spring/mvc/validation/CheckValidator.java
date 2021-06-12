@@ -13,7 +13,6 @@ public class CheckValidator implements ConstraintValidator<CheckEmail, String> {
 
     @Override
     public boolean isValid(String valueEntered, ConstraintValidatorContext context) {
-
         return valueEntered.endsWith(endOfEmail);
     }
 

@@ -1,6 +1,12 @@
 package ru.scarlet.spring.mvc.entity;
 
+import ru.scarlet.spring.mvc.validation.CheckFields;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import java.util.List;
 
 
 @Entity
@@ -31,11 +37,17 @@ public class Location {
         this.latitude = latitude;
     }
 
+
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @CheckFields
+//    @NotBlank
+//    @NotEmpty
+//    @NotNull
     @Column(name = "longitude")
     private double longitude;
 

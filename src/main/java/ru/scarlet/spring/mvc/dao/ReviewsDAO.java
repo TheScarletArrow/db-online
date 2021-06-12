@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ReviewsDAO {
     public List<Reviews> getAllReviews();
+
+    void saveReview(Reviews reviews);
 }

@@ -39,5 +39,6 @@
         </tr>
     </c:forEach>
 </table>
+<jsp:include page="all-locations.jsp"/>
 </body>
 </html>

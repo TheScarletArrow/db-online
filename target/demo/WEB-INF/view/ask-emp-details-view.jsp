@@ -16,7 +16,7 @@
 </head>
 <body>
 <br><br>
-<form:form action="showDetails" modelAttribute="location">
+<form:form action="showDetails" modelAttribute="location" method="post">
     Longitude <form:input path="longitude"/>
     <br>
     Latitude <form:input path="latitude"/>
